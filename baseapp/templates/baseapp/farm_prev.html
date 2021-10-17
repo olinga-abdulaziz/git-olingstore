@@ -1,0 +1,15 @@
+{% load static %}
+{% if farms %}
+<div class="form-group" >
+<div class="cont1">
+    <div style="display: flex;position: relative;width: 100%;">
+        <a href="{% url 'farm' %}"><h5 class="btn btn-secondary btn-sm"><strong>More <i class="fas fa-stream"></i></strong></h5></a><small style="margin-left: 10px;"><span class="badge badge-dark" style="right: 0;position: absolute;margin-top: 5px;padding: 5px;">{{farms.count}} Items</span></small>
+    </div>
+</div>
+
+</div>
+{% endif %}
+ 
+
+
+

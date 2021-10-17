@@ -1,0 +1,17 @@
+{% extends 'baseapp/main.html' %}
+{% block content %}
+<br>
+<div class="container " style="margin-bottom: 40px;">
+        <div class="form-group">
+            <form action="" class="form" method="POST">
+                <h3>Edit Account</h3>
+                <hr>
+                {% csrf_token %}
+                 {{form.as_p}} <br>
+                 <a href="{url 'password'}">Change password</a> <br><br>
+              <input type="submit" name="submit" class="btn btn-secondary"  value="Update" style="width: 30vh;">
+            </form>
+        </div>
+</div>
+{%endblock%}
+

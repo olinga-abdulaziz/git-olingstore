@@ -1,0 +1,30 @@
+{% load static %}
+{% if schools %}
+<div class="form-group" >
+<div class="cont1">
+    <div style="display: flex;position: relative;width: 100%;">
+        <a href="{% url 'school' %}"><h5 class="btn btn-secondary btn-sm"><strong>More <i class="fas fa-stream"></i></strong></h5></a><small style="margin-left: 10px;"><span class="badge badge-dark" style="right: 0;position: absolute;margin-top: 5px;padding: 5px;">{{schools.count}} Items</span></small>
+    </div>
+</div>
+<ul class="ul" >
+    
+    {% for p in schools %}
+    <li class="li">
+            <div class="cardMain" style="padding-right: 10px;">
+                <div class="bodyDiv">
+                    <img src="{% if p.image1 %}{{p.image1.url}}{% else %}{% if p.image2 %}{{p.image2.url}}{% else %}{% if p.image3 %}{{p.image3.url}}{% else %}{% if p.image4 %}{{p.image4.url}}{% else %}{% static 'images/avatar.png' %} {% endif %}{% endif %}{% endif %}{% endif %}" alt="" width="215" height="150" style="margin-top: 5px;" class="rounded">
+                    <font><strong>{{p.product_name}}</strong></font><br>
+                    <small style="color: green;"><i class="fas fa-map-marker-alt"></i> {{p.address|title}}</small>
+                    <p class="pDet"><small>{{p.description|slice:50}}</small></p>
+                    <a href="{% url 'productdetail' p.id %}"><button class="btn btn-secondaryuygy"><i class="fas fa-shopping-cart"></i> Buy</button></a><font style="float: right; margin-right: 10px;">Ksh.{{p.price}}</font>
+                </div>
+            </div>
+    </li>
+    {% endfor %}
+</li>
+</ul>
+</div>
+{% endif %}
+ 
+
+

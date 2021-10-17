@@ -1,0 +1,52 @@
+
+{% load static %}
+{% if others %}
+<div class="form-group" >
+<div class="cont1">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <center><img src="{% static 'images/jumia.jpg' %}" alt="Los Angeles"  width="200" height="200"></center>
+            <div class="carousel-caption">
+         
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <center><img src="{% static 'images/killmall.png' %}" alt="Chicago"  width="200" height="200"></center>
+            <div class="carousel-caption">
+              
+            </div>   
+          </div>
+          <div class="carousel-item">
+           <center> <img src="{% static 'images/amazon.jpg' %}" alt="Chicago"  width="200" height="200"></center>
+            <div class="carousel-caption">
+              
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <center><img src="{% static 'images/jiji.png' %}" alt="New York" width="200" height="200"></center>
+            <div class="carousel-caption">
+            </div>   
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+</div>
+
+</div>
+{% endif %}
+ 
+
+
+

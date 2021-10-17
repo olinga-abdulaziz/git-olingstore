@@ -1,0 +1,74 @@
+{% extends 'baseapp/main.html' %}
+
+  
+{% block content %}
+<div class="container-fluid">
+     <form action="">
+         <br>
+        
+        <div style="display: flex;">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="search" placeholder="Search product ..." class="form-control" name='searched'><button type="submit" class="btn btn-secondary"style="display: inline-block; margin-left: 10px;"><i class="fas fa-search"></i></button>
+            </form>
+           
+        </div>
+     </form> <br>
+    <div class="row" style="margin: 1px;" >
+      <div class="col-sm-12" style=" box-shadow: 2px 2px 5px gray;padding-top: 10px;margin-bottom: 10px;">
+        <p class="pText1"><strong><i class="fas fa-mobile"></i>  Electronic Items</strong></p>
+        <hr>
+        <small>This List contain some of electronic items,click more to explore more </small>
+        {% include 'baseapp/electronic_prev.html' %}
+         </div>
+    </div>
+    <div class="col-sm-12" style=" box-shadow: 2px 2px 5px gray;padding-top: 10px;margin-bottom: 10px;">
+        <p class="pText1"><strong><i class="fas fa-tshirt"></i>  Clothings Items</strong></p>
+        <hr>
+        <small>This List contain some of Clothings items,click more to explore more </small>
+        {% include 'baseapp/clothings_prev.html' %}
+    </div>
+    <div class="col-sm-12" style=" box-shadow: 2px 2px 5px gray;padding-top: 10px;margin-bottom: 10px;">
+        <p class="pText1"><strong><i class="fas fa-graduation-cap"></i>  School  Items</strong></p>
+        <hr>
+        <small>This List contain some of SChool items,click more to explore more </small>
+        {% include 'baseapp/school_prev.html' %}
+    </div>
+    <div class="col-sm-12" style=" box-shadow: 2px 2px 5px gray;padding-top: 10px;margin-bottom: 10px;">
+        <p class="pText1"><strong><i class="fas fa-faucet"></i>  House Items</strong></p>
+        <hr>
+        <small>This List contain some of House items,click more to explore more </small>
+        {% include 'baseapp/housing_prev.html' %}
+    </div>
+    <div class="col-sm-12" style=" box-shadow: 2px 2px 5px gray;padding-top: 10px;margin-bottom: 10px;">
+        <div style="padding-top: 10px;">
+            <center><h1>Our Team</h1></center>
+            <center>  <small>These is list of our team and employees in our company take your time and contact them for any clarification</small></center>
+        </div>
+        <hr>
+        {% include 'baseapp/vehicle_prev.html' %}
+    </div>
+    <div class="col-sm-12" style=" box-shadow: 2px 2px 5px gray;padding-top: 10px;margin-bottom: 10px;">
+        <div style="padding-top: 10px;">
+            <center><h1>Our Pertners</h1></center>
+            <center>  <small>These is list of our team and employees in our company take your time and contact them for any clarification</small></center>
+        </div>
+        <hr>
+        {% include 'baseapp/others_prev.html' %}
+    </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            {% include 'baseapp/footer.html' %}
+        </div>
+    </div>
+    <div class="row" style="  height: 8vh; background-color: rgb(72, 72, 77);">
+       <div class="col-sm">
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="#"> abdulaziz olinga</a>
+          </div>
+       </div>
+    </div>
+ 
+{% endblock content %}

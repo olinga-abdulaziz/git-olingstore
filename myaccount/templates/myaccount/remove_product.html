@@ -1,0 +1,29 @@
+{% extends 'baseapp/main.html' %}
+{% block content %}
+<br>
+{% if user.is_authenticated %}
+    {% if user.id == product.user.id %}
+<div class="container" style="margin-bottom: 40px;">
+  <div class="form-group">
+    <form action="" class="form" method="POST" enctype="multipart/form-data">
+        <h3>Confirm</h3>
+        <p>Are you sure you want to delete this item ?,</p>
+        <hr>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-danger" value="Delete">
+    </form>
+  </div>
+</div>
+{% else %}
+<div class="container">sorry page not found !! please <a href="{% url 'home' %}">back home</a></div>
+{% endif %}
+{% else %}
+     <div class="container">sorry page not found !! please <a href="{% url 'login' %}">login</a></div>
+{% endif %}
+<script>
+    var currUser="{{user.id}}"
+    document.getElementById('user').value=currUser
+</script>
+{%endblock%}
+
