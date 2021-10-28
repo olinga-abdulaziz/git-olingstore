@@ -1,0 +1,34 @@
+{% extends 'baseapp/main.html' %}
+{% block content %}
+<br>
+<div class="container" style="margin-bottom: 40px;">
+  <div class="form-group">
+    {% if messages %}
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}{% endif %}
+    <form action="" class="form" method="POST" enctype="multipart/form-data">
+        <h3>Sell new product</h3>
+
+        {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{error}}
+        </div>
+        {% endfor %}
+
+        <strong style="color: green;">notice !! befor you make a sell make sure you have  your info correctly for the customer to reach you !!! ,, if not <a href="{% url 'createprofile' %}">create info</a> </strong><br><br> 
+        <p>fill the correct information to your product,</p>
+        <hr>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-secondary" value="Register">
+    </form>
+  </div>
+</div>
+
+<script>
+    var currUser="{{user.id}}"
+    document.getElementById('user').value=currUser
+</script>
+{%endblock%}
+

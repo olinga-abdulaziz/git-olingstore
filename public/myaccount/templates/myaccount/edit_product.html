@@ -1,0 +1,23 @@
+{% extends 'baseapp/main.html' %}
+{% block content %}
+<br>
+<div class="container" style="margin-bottom: 40px;">
+  <div class="form-group">
+    <form action="" class="form" method="POST" enctype="multipart/form-data">
+        <h3>Edit product</h3>
+        <p>fill the correct information to your product,</p>
+        <hr>
+        {% csrf_token %}
+        {{form.as_p}}
+        
+        <input type="submit" class="btn btn-secondary" value="Update">
+    </form>
+  </div>
+</div>
+
+<script>
+    var currUser="{{user.id}}"
+    document.getElementById('user').value=currUser
+</script>
+{%endblock%}
+

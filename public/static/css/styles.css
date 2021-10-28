@@ -1,0 +1,72 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Spartan', sans-serif;
+}
+.nvbrn{
+    font-family: cursive;
+}
+body{
+    scroll-behavior: smooth;
+}
+.ul{
+    display: flex;
+    list-style: none;
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+.li{
+    display: flex;
+    margin-left: 10px;
+    list-style: none;
+  
+}
+.cardMain{
+    width: 240px;
+    height: auto;
+    padding-bottom: 30px;
+    box-shadow: 2px 3px 5px gray;
+}
+.bodyDiv{
+    width: 100%;
+    height: 50%;
+    padding-left: 10px;
+}
+.img1{
+    width: 100%;
+    height: inherit;
+}
+.pDet{
+    text-align: start;
+}
+.cont1{
+    width: auto;
+    height: auto;
+    padding: 20px;
+   
+    
+}
+.pText1{
+    font-family: sans-serif;
+    color: rgb(146, 147, 150);
+}
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(52, 51, 59);
+}
+.bottomDiv{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(62, 62, 70);
+}
+.rou{
+    box-shadow: 2px 2px 5px gray;
+}
+.contact{
+    font-family: sans-serif;
+}

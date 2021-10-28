@@ -1,0 +1,41 @@
+{% extends 'baseapp/main.html' %}
+{% block content %}
+<br>
+<div class="container " style="margin-bottom: 40px;">
+        <div class="form-group">
+            <form action="" class="form" method="POST">
+                <h3>Create Account</h3>
+                <hr>
+                {% csrf_token %}
+                <div class="col-sm">
+                    <label for="username">Username :</label><br>
+                    <input type="text" placeholder="Username" name="username" class="form-control" >
+                </div>
+                <br>
+                <div class="col-sm">
+                    <label for="username">First Name :</label><br>
+                    <input type="text" placeholder="first name" name="first_name" class="form-control" >
+                </div>
+                <br>
+                <div  class="col-sm">
+                    <label for="username">Last Name :</label><br>
+                    <input type="text" placeholder="last name" name="last_name" class="form-control" >
+                </div>
+                <br>
+                <div class="col-sm">
+                    <label for="username">Password :</label><br>
+                    <input type="password" placeholder="Password" name="password1" class="form-control">
+                </div><br>
+                <div class="col-sm">
+                    <label for="username">Password :</label><br>
+                    <input type="password" placeholder="Confirm password" name="password2" class="form-control">
+                </div><br>
+                <input type="submit" class="btn btn-secondary" value="Register">
+                <br> <br>
+            or having an account ?
+            <a href="{% url 'login' %}">signin </a>
+            </form>
+        </div>
+</div>
+{%endblock%}
+
